@@ -464,6 +464,7 @@ service thermanager /system/bin/thermanager /system/etc/thermanager.xml
 # Offline charger
 service charger /sbin/healthd -c
     class charger
+    group system
     seclabel u:r:healthd:s0
 
 on property:ro.boot.baseband=mdm
