@@ -6,9 +6,7 @@ lib/libacdbloader.so
 lib/libcsd-client.so
 
 # Bluetooth
-bin/btnvtool
 bin/hci_qcomm_init
-vendor/lib/libbtnv.so
 
 # Bootloader firmware
 etc/firmware/rpm.mbn
