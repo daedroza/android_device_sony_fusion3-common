@@ -1,7 +1,7 @@
-type rfkill_device, dev_type;
-
-# IR blaster
+# /dev/block partitions
 type ir_remote_serial_device, dev_type;
+type trim_area_partition_device, dev_type;
 
-# Synaptics RMI
+# /dev devices
+type rfkill_device, dev_type;
 type rmi_device, dev_type;
