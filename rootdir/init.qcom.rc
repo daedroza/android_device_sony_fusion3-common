@@ -229,6 +229,8 @@ on boot
     chown system input /sys/bus/iio/devices/iio:device1/scan_elements/in_magn_y_en
     chown system input /sys/bus/iio/devices/iio:device1/scan_elements/in_magn_z_en
     chown system input /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_en
+    write /sys/module/leds_lm3533_ng/parameters/lm3533_bl_reduction 8
+    write /sys/module/leds_lm3533_ng/parameters/lm3533_bl_brightness_min 30
 
     # Bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
