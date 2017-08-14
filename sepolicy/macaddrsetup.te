@@ -8,5 +8,5 @@ unix_socket_connect(macaddrsetup, tad, tad)
 allow macaddrsetup bluetooth_data_file:dir rw_dir_perms;
 allow macaddrsetup bluetooth_data_file:file create_file_perms;
 allow macaddrsetup self:capability { dac_override fowner chown fsetid };
-allow macaddrsetup sysfs_wlanmac:file rw_file_perms;
-allow macaddrsetup sysfs_wlanserial:file rw_file_perms;
+allow macaddrsetup sysfs_mac_address:file rw_file_perms;
+allow macaddrsetup sysfs_mac_serial:file rw_file_perms;
