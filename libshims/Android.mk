@@ -29,7 +29,7 @@ LOCAL_C_INCLUDES := \
     external/safe-iop/include \
     system/core/libutils
 
-LOCAL_SHARED_LIBRARIES := libcutils libgui libbinder libutils liblog
+LOCAL_SHARED_LIBRARIES := libcutils libgui libbinder libsensor libutils liblog
 LOCAL_MODULE := libshim_cald
 LOCAL_MODULE_TAGS := optional
 
