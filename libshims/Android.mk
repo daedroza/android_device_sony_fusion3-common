@@ -11,7 +11,7 @@ LOCAL_C_INCLUDES := \
     external/safe-iop/include \
     system/core/libutils
 
-LOCAL_SHARED_LIBRARIES := libui libutils liblog
+LOCAL_SHARED_LIBRARIES := libbase libui libutils liblog
 LOCAL_MODULE := libshim_camera
 LOCAL_MODULE_TAGS := optional
 
