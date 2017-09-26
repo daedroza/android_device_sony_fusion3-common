@@ -25,6 +25,9 @@
 /system/bin/thermanager                                                           u:object_r:thermanager_exec:s0
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
+# /vendor
+/(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate@1\.0-service\.fusion3 u:object_r:hal_dumpstate_default_exec:s0
+
 # /sys
 /sys/devices/platform/ir_remote_control/enable                                    u:object_r:sysfs_ir_remote_control:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
