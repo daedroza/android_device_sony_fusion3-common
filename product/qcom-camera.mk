@@ -4,5 +4,5 @@ PRODUCT_COPY_FILES += \
 
 # Camera HIDL interfaces
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    camera.device@1.0-impl
+    android.hardware.camera.provider@2.4-impl-legacy \
+    camera.device@1.0-impl-legacy
