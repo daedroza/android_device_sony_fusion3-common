@@ -308,6 +308,14 @@ static void resendLastNITZTimeData(RIL_SOCKET_ID socket_id) {
         int responseType = (s_callbacks.version >= 13)
                            ? RESPONSE_UNSOLICITED_ACK_EXP
                            : RESPONSE_UNSOLICITED;
+
+        // acquire read lock for the service before calling nitzTimeReceivedInd() since it reads
+        // nitzTimeReceived in ril_service
+        pthread_rwlock_t *radioServiceRwlockPtr = radio::getRadioServiceRwlock(
+                (int) socket_id);
+        int rwlockRet = pthread_rwlock_rdlock(radioServiceRwlockPtr);
+        assert(rwlockRet == 0);
+
         int ret = radio::nitzTimeReceivedInd(
             (int)socket_id, responseType, 0,
             RIL_E_SUCCESS, s_lastNITZTimeData, s_lastNITZTimeDataSize);
